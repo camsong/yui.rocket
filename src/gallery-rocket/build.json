@@ -3,7 +3,7 @@
   "builds": {
     "gallery-rocket": {
       "jsfiles": [
-        "js/gallery-rocket.js"
+        "js/rocket.js"
       ]
     },
     "gallery-rocket-app": {
@@ -29,6 +29,11 @@
     "gallery-rocket-list-view": {
       "jsfiles": [
         "js/rocket-list-view.js"
+      ]
+    },
+    "gallery-rocket-child-view-container": {
+      "jsfiles": [
+        "js/rocket-child-view-container.js"
       ]
     },
     "gallery-rocket-region": {

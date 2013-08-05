@@ -1,3 +1,5 @@
+YUI.add('gallery-rocket-child-view-container', function (Y, NAME) {
+
 'use strict';
 
 var ChildViewContainer = function(views) {
@@ -69,3 +71,6 @@ ChildViewContainer.prototype = {
 };
 
 Y.RChildViewContainer = ChildViewContainer;
+
+
+}, '0.1.0', {"requires": ["yui-base"]});

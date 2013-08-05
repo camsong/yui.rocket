@@ -1,6 +1,6 @@
 'use strict';
 
-var Layout = Y.Base.create('zuiLayout', Y.ZUI.View, [Y.ZUI.EventBroker], {
+var Layout = Y.Base.create('rocketLayout', Y.RView, [Y.REventBroker], {
   // public properties
   regionManager: null,
 
@@ -39,11 +39,11 @@ var Layout = Y.Base.create('zuiLayout', Y.ZUI.View, [Y.ZUI.EventBroker], {
       this.regionManager.resetRegions();
     }
     var args = Array.prototype.slice.apply(arguments);
-    return Y.ZUI.View.prototype.renderer.apply(this, args);
+    return Y.RView.prototype.renderer.apply(this, args);
   },
 
   bindUI: function() {
-    Y.ZUI.View.prototype.bindUI.apply(this);
+    Y.RView.prototype.bindUI.apply(this);
   },
 
   // Internal method to initialize the regions that have been defined in a
@@ -56,7 +56,7 @@ var Layout = Y.Base.create('zuiLayout', Y.ZUI.View, [Y.ZUI.EventBroker], {
   // Internal method to initialize the region manager
   // and all regions in it
   _initRegionManager: function() {
-    this.regionManager = new Y.ZUI.RegionManager();
+    this.regionManager = new Y.RRegionManager();
     this.listenTo(this.regionManager, "add", function(e){
       // so that you can visit the regions directly by the name
       this[e.name] = e.region;

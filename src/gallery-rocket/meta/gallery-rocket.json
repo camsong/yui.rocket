@@ -6,6 +6,7 @@
       "gallery-rocket-view",
       "gallery-rocket-layout",
       "gallery-rocket-list-view",
+      "gallery-rocket-child-view-container",
       "gallery-rocket-region",
       "gallery-rocket-region-manager",
       "gallery-rocket-event-broker",
@@ -27,6 +28,9 @@
       },
       "gallery-rocket-list-view": {
         "requires": ["gallery-rocket-view", "handlebars", "gallery-rocket-child-view-container"]
+      },
+      "gallery-rocket-child-view-container": {
+        "requires": ["yui-base"]
       },
       "gallery-rocket-region": {
         "requires": ["gallery-rocket-view"]

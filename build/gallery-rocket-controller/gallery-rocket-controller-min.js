@@ -1,0 +1,1 @@
+YUI.add("gallery-rocket-controller",function(e,t){"use strict";var n=e.Base.create("rocketController",e.Base,[e.REventBroker],{destructor:function(){this.stopListening()}},{ATTRS:{}});e.RController=n},"0.1.0",{requires:["gallery-rocket-event-broker"]});

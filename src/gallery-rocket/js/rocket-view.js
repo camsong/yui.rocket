@@ -21,6 +21,7 @@ View = Y.Base.create('rocketView', Y.View, [Y.REventBroker], {
   // destroyContainer=false will keep the container node
   destroy: function(destroyContainer) {
     if (this.get(DESTROYED)) { return; }
+    if (this._publishRender) { this._publishRender.detach(); }
     if (typeof destroyContainer === 'undefined') { destroyContainer = true; }
     if (destroyContainer) {
       Y.View.prototype.destroy.call(this, {remove: true});
@@ -56,6 +57,27 @@ View = Y.Base.create('rocketView', Y.View, [Y.REventBroker], {
   all: function() {
     var container = this.get('container');
     return container.all.apply(container, arguments);
+  },
+
+  /**
+  Override `Y.View.create` function to guarantee the container is always in DOM.
+  If it's not, insert the container to body.
+  and returns a container node for this view.
+
+  By default, the container is created from the HTML template specified in the
+  `containerTemplate` property
+
+  @method create
+  @param {HTMLElement|Node|String} [container] Selector string, `Y.Node`
+      instance, or DOM element to use at the container node.
+  @return {Node} Node instance of the created container node.
+  **/
+  create: function (container) {
+    var containerNode = Y.View.prototype.create.call(this, container);
+    if  (!containerNode.inDoc()) {
+      Y.Node.one('body').insert(containerNode, 0);
+    }
+    return containerNode;
   },
 
   generateClientId: function () {

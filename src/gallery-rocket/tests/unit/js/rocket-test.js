@@ -1,5 +1,4 @@
 YUI.add('rocket-test', function(Y) {
-
   var suite = new Y.Test.Suite('Rocket');
 
   suite.add(new Y.Test.Case({
@@ -20,7 +19,6 @@ YUI.add('rocket-test', function(Y) {
   }));
 
   Y.Test.Runner.add(suite);
-
 }, '@VERSION@', {
   requires: ['test', 'gallery-rocket']
 });

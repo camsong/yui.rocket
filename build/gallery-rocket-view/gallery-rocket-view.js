@@ -94,7 +94,7 @@ View = Y.Base.create('rocketView', Y.View, [Y.REventBroker], {
   // template can be a handlebar string, or a selector string.
   // template default to the [dasherized-view-name]-template
   getTemplateFunction: function() {
-    var template = this.get('template') || '#' + Y.ZUI.Util.dasherize(this.name) + '-template';
+    var template = this.get('template') || '#' + Y.RUtil.dasherize(this.name) + '-template';
     var templateHtml = Y.one(template) ? Y.one(template).getHTML() : template;
     return Y.Handlebars.compile(templateHtml);
   },

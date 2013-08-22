@@ -1,0 +1,35 @@
+{
+  "name": "rocket",
+  "version": "0.1.0",
+  "description": "A JavaScript MVC framework for scalable One-Page-Application using YUI",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": "https://github.com/camsong/yui.rocket",
+  "keywords": [
+    "yui",
+    "rocket",
+    "app framework"
+  ],
+  "author": "camsong",
+  "license": "BSD",
+  "readmeFilename": "README.md",
+  "devDependencies": {
+    "grover": "0.1.16",
+    "yogi": "0.1.11",
+    "grunt": "~0.4.1",
+    "grunt-contrib-jshint": "~0.4.3",
+    "shifter": "0.3.3",
+    "express": "~3.2.6",
+    "combohandler": "~0.3.4",
+    "grunt-contrib-concat": "~0.3.0",
+    "yuidocjs": "~0.3.45"
+  },
+  "dependencies": {
+    "grunt-contrib-uglify": "~0.2.2"
+  },
+  "engines": {
+    "node": "0.10.10"
+  }
+}

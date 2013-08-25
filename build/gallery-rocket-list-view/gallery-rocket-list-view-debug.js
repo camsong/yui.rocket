@@ -178,4 +178,4 @@ var ListView = Y.Base.create('rocketListView', Y.RView, [], {
 Y.RListView = ListView;
 
 
-}, '0.1.0', {"requires": ["gallery-rocket-view", "handlebars", "gallery-rocket-child-view-container"]});
+}, '0.1.0', {"requires": ["gallery-rocket-view", "handlebars", "model-list", "gallery-rocket-child-view-container"]});

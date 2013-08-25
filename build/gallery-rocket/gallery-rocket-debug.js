@@ -16,6 +16,7 @@ Y.Rocket = Y.App;
     "requires": [
         "app",
         "gallery-rocket-controller",
+        "gallery-rocket-model",
         "gallery-rocket-view",
         "gallery-rocket-layout",
         "gallery-rocket-list-view",

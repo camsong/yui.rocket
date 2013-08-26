@@ -122,13 +122,13 @@ layout.footerView.show(headerView2);  // close mainView1 and show mainView2 unde
 ```
 
 ## Modules List
-* Y.Rocket: An application object that starts your app via initializers, routes and more.
-* Y.RController: A general purpose object for controlling modules, routers, view, and implementing a mediator pattern.
-* Y.RModel: Create modules and sub-modules within the application.
+* **Y.Rocket**: An application object that starts your app via initializers, routes and more.
+* **Y.RController**: A general purpose object for controlling modules, routers, view, and implementing a mediator pattern.
+* **Y.RModel**: Create modules and sub-modules within the application.
 * Views and related modules
   * **Y.RView**: Base View that can render.
-  * Y.RListView: A view that iterates over a modelList, and renders individual ItemView instances for each model.
-  * Y.RLayout: A view that can map DOMs to different regions, and manage lifecycle of the view in the region.
-  * Y.RRegion: A managable area related to a DOM.
-  * Y.RRegionManager: Manager of Y.RRegion, used by Y.RLayout.
-* Y.REventBroker: Enhance event managment, add `stopListening`, `listenTo` and more.
+  * **Y.RListView**: A view that iterates over a modelList, and renders individual ItemView instances for each model.
+  * **Y.RLayout**: A view that can map DOMs to different regions, and manage lifecycle of the view in the region.
+  * **Y.RRegion**: A managable area related to a DOM.
+  * **Y.RRegionManager**: Manager of Y.RRegion, used by Y.RLayout.
+* **Y.REventBroker**: Enhance event managment, add `stopListening`, `listenTo` and more.

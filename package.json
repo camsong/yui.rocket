@@ -16,7 +16,6 @@
   "license": "BSD",
   "readmeFilename": "README.md",
   "devDependencies": {
-    "grover": "0.1.16",
     "yogi": "0.1.11",
     "grunt": "~0.4.1",
     "grunt-contrib-jshint": "~0.4.3",

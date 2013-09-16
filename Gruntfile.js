@@ -33,16 +33,21 @@ module.exports = function(grunt) {
     });
   });
 
-  grunt.registerTask('test', 'Run tests using grover.', function(arg1, arg2) {
-    var grover = path.join(process.cwd(), 'node_modules/grover/bin/grover.js'),
-        testFile = path.join(process.cwd(),"src/gallery-rocket/tests/unit/index.html"),
+  grunt.registerTask('test', 'Run tests using yogi.', function(arg1, arg2) {
+    var yogi = path.join(process.cwd(), 'node_modules/yogi/bin/yogi'),
         done = this.async(),
         child;
 
-    child = exec(process.execPath, [grover, '--console', testFile], { stdio: 'inherit' });
+    grunt.log.ok("Run tests");
+
+    child = exec(process.execPath, [yogi, 'test', '--coverage', '--istanbul'], {
+      stdio: 'inherit',
+      env: process.env,
+      cwd: path.join(process.cwd(), 'src')
+    });
     child.on('exit', function(code) {
       if (code) {
-        grunt.fail.fatal('Running grover test failed with code: ' + code);
+        grunt.fail.fatal('Running yogi test failed with code: ' + code);
       }
       done();
     });

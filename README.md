@@ -21,12 +21,11 @@ Rocket.JS is already pushed to YUI Gallery, so you can use YUI CDN to get Rocket
 
 ```
 // Put the YUI seed file on your page.
-<script src="http://yui.yahooapis.com/3.11.0/build/yui/yui-min.js"></script>
+<script src="http://yui.yahooapis.com/3.12.0/build/yui/yui-min.js"></script>
+
 <script>
 // Create a YUI sandbox on your page.
-YUI({
-    gallery: 'gallery-2013.08.22-21-03'
-}).use('gallery-rocket', function(Y)
+YUI().use('gallery-rocket', function(Y)
     // The Rocket.JS modules are loaded and ready to use.
     // Your code goes here!
 });

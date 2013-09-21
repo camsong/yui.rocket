@@ -19,7 +19,7 @@ Make your YUI apps rock!
 ####Require RocketJS
 Rocket.JS is already pushed to YUI Gallery, so you can use YUI CDN to get Rocket.JS
 
-```
+```html
 // Put the YUI seed file on your page.
 <script src="http://yui.yahooapis.com/3.12.0/build/yui/yui-min.js"></script>
 
@@ -36,7 +36,7 @@ YUI().use('gallery-rocket', function(Y)
 Rocket is aimed to build complex applications but it's easy to get started.
 Template is handlebars.JS by default.
 
-```
+```js
 var view = new Y.RView({
   template: 'Hello {{beauty}}',
   beauty: 'Rocket'
@@ -48,7 +48,7 @@ view.render();
 ####Model Binding
 By default every property of your view is automatically available in the template. If a model is bound its attributes will also be made available.
 
-```
+```js
 var model = new Y.RModel({
   beauty: 'Rocket'
 });
@@ -63,7 +63,7 @@ var view = new RView({
 ####List rendering
 Easily render list with the ListView. Thorax will make sure that your view stays current as models in your modelList are added, removed or updated.
 
-```
+```js
 var models = new Y.ModelList({
   items: [
     {firstName: 'Brendan', lastName: 'Eich'},
@@ -84,7 +84,7 @@ var view = new Y.RListView({
 
 will generate HTML:
 
-```
+```html
 <ul>
   <li>Brendan - Eich</li>
   <li>Yukihiro - Matsumoto</li>
@@ -96,13 +96,13 @@ will generate HTML:
 
 HTML:
 
-```
+```html
 <div id='main'></div>
 <div id='footer'></div>
 ```
 
 JavaScript:
-```
+```js
 var layout = new Y.RLayout({
   regions: {
     main: '#main',

@@ -116,7 +116,7 @@ var footerView = new Y.RView();
 
 layout.footer.show(footerView);  // show footerView under <div id='footer'>
 layout.main.show(mainView1);  // show mainView1 under <div id='main'>
-layout.footerView.show(headerView2);  // close mainView1 and show mainView2 under <div id='main'>
+layout.main.show(mainView2);  // close mainView1 and show mainView2 under <div id='main'>
 
 ```
 
